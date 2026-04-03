@@ -1,0 +1,20 @@
+# Robots.txt for Orthophonie Platform
+# Allow all crawlers to index the site
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /*.xml$
+
+# Specific rules for common crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap location (if you have one)
+# Sitemap: https://orthophonie.example.com/sitemap.xml
+

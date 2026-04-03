@@ -20,13 +20,13 @@ const Footer = () => {
                     </Link>
                 </div>
 
-                <div className="text-sm text-base-content/60">
+                <div className="text-sm text-base-content">
                     Fait avec <Heart size={16} className="inline text-red-500" fill="currentColor" /> par{" "}
                     <a
                         href="https://leoderoin.fr"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="link link-hover text-sm text-red-400"
+                        className="link link-hover text-sm text-red-700 font-semibold underline"
                     >
                         Leo Deroin
                     </a>
