@@ -34,7 +34,7 @@ const Home = () => {
                         </Link>
 
                         <Link
-                            to="/exercice"
+                            to="/exercise"
                             className="btn btn-secondary btn-lg"
                         >
                             <svg

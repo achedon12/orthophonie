@@ -92,7 +92,7 @@ orthophonie/
 │   ├── pages/
 │   │   ├── Home.jsx            # Page d'accueil
 │   │   ├── Presentation.jsx    # Exercices de présentation
-│   │   └── Exercice.jsx        # Plateforme d'exercices
+│   │   └── Exercise.jsx        # Plateforme d'exercices
 │   ├── utils/
 │   │   ├── Exercices.js        # Base de données des exercices
 │   │   ├── Questions.js        # Questions de présentation
