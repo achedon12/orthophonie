@@ -13,3 +13,11 @@ services:
     environment:
       - CHOKIDAR_USEPOLLING=true
       - NGINX_RESOLVER=127.0.0.11
+    restart: unless-stopped
+    networks:
+      - ortho_network
+
+networks:
+  ortho_network:
+    external:
+      name: ortho_network
