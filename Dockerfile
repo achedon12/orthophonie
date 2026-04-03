@@ -1,4 +1,4 @@
-FROM node:25-alpine AS build
+FROM node:20-alpine AS build
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ COPY . .
 
 RUN npm run build
 
-FROM nginx:latest
+FROM nginx:1.28-alpine
 
 COPY --from=build /app/dist /usr/share/nginx/html
 
