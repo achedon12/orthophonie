@@ -1,23 +1,37 @@
-import {useEffect} from 'react'
+'use client';
+import {useEffect} from 'react';
+import {useLocation} from 'react-router-dom';
 
 const Matomo = () => {
-    useEffect(() => {
-        var _paq = window._paq = window._paq || [];
-        _paq.push(['trackPageView']);
-        _paq.push(['enableLinkTracking']);
-        (function () {
-            var u = "//matomo.leoderoin.fr/";
-            _paq.push(['setTrackerUrl', u + 'matomo.php']);
-            _paq.push(['setSiteId', '4']);
-            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-            g.async = true;
-            g.src = u + 'matomo.js';
-            s.parentNode.insertBefore(g, s);
-        })();
-    }, [])
+    const location = useLocation();
 
-    return null
+    useEffect(() => {
+        if (import.meta.env.VITE_APP_ENV !== 'production' && import.meta.env.VITE_APP_ENV !== 'prod') return;
+
+        const u = '//matomo.leoderoin.fr/';
+
+        if (!window._paq) {
+            window._paq = [];
+            window._paq.push(['setTrackerUrl', u + 'matomo.php']);
+            window._paq.push(['setSiteId', '4']);
+            window._paq.push(['enableLinkTracking']);
+
+            const s = document.createElement('script');
+            s.async = true;
+            s.src = u + 'matomo.js';
+            document.head.appendChild(s);
+        }
+    }, []);
+
+    useEffect(() => {
+        if (import.meta.env.VITE_APP_ENV !== 'production' && import.meta.env.VITE_APP_ENV !== 'prod') return;
+
+        if (window._paq) {
+            window._paq.push(['trackPageView']);
+        }
+    }, [location]);
+
+    return null;
 }
 
-export default Matomo
-
+export default Matomo;

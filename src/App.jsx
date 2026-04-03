@@ -10,7 +10,6 @@ import Matomo from "./components/common/Matomo.jsx";
 const App = () => {
     return (
         <Router>
-            <Matomo />
             <div className="min-h-screen flex flex-col bg-base-200">
                 <Header />
                 <main className="grow">
@@ -21,6 +20,7 @@ const App = () => {
                         <Route path="/presentation" element={<Presentation />} />
                     </Routes>
                 </main>
+                <Matomo />
                 <Footer />
             </div>
         </Router>
