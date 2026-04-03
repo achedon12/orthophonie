@@ -1,3 +1,9 @@
 .idea
+.git
 node_modules
 dist
+.gitignore
+.env
+.env.example
+README.md
+docker-compose.yml
