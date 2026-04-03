@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+
+  orthophonie:
+    container_name: orthophonie
+    build: .
+    ports:
+      - "810:80"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - NGINX_RESOLVER=127.0.0.11
