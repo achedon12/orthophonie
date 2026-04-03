@@ -65,11 +65,11 @@ const Home = () => {
                                 personnelle</p>
                         </div>
                         <div className="bg-base-100 rounded-lg p-3 shadow-md">
-                            <span className="font-semibold text-secondary/80 flex items-center gap-2">
+                            <span className="font-semibold text-secondary flex items-center gap-2">
                                 <ClipboardList size={20} />
                                 Exercices :
                             </span>
-                            <p className="mt-1 text-base-content/80">Exercices variés pour améliorer la prononciation et le langage</p>
+                            <p className="mt-1 text-base-content/90">Exercices variés pour améliorer la prononciation et le langage</p>
                         </div>
                     </div>
                 </div>
