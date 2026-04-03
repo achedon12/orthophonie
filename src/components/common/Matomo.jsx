@@ -3,9 +3,8 @@ import { useEffect } from 'react'
 const Matomo = () => {
     useEffect(() => {
         // Charger Matomo seulement en production
-        if (import.meta.env.VITE_APP_ENV === 'production') {
+        if (import.meta.env.VITE_APP_ENV === 'production' || import.meta.env.VITE_APP_ENV === 'prod' ) {
             var _paq = window._paq = window._paq || [];
-            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
             _paq.push(['trackPageView']);
             _paq.push(['enableLinkTracking']);
             (function() {
